@@ -25,7 +25,7 @@ touch $OUTFILE
 
 #sleep 3
 
-$HASHCATBIN -m $2 -a 3 $1 -1 bcdfghjklmnpqrstvwxyz -2 aeiou ?1?2?1?d?d?1?2?1 -w 3 -o $OUTFILE -O
+$HASHCATBIN -m $2 -a 3 $1 -1 bcdfghjklmnpqrstvwxyz -2 aeiou ?1?2?1?d?d?1?2?1 -w 3 -o $OUTFILE --session hashcat-tsi -O
 
 
 #EOF
