@@ -14,7 +14,7 @@ if [ $# -eq 0 ]
 		exit
 fi
 
-HASHCATBIN=/opt/hashcat/hashcat-3.5.0/hashcat64.bin
+HASHCATBIN=/opt/hashcat/hashcat64.bin
 OUTFILE=/sand/found-passwords-`date +%F_%H-%M-%S`.txt
 
 echo "This will output the file \"$OUTFILE\"."
@@ -25,7 +25,7 @@ touch $OUTFILE
 
 #sleep 3
 
-$HASHCATBIN -m $2 -a 3 $1 -1 bcdfghjklmnpqrstvwxyz -2 aeiou ?1?2?1?d?d?1?2?1 -w 3 -o $OUTFILE
+$HASHCATBIN -m $2 -a 3 $1 -1 bcdfghjklmnpqrstvwxyz -2 aeiou ?1?2?1?d?d?1?2?1 -w 3 -o $OUTFILE -O
 
 
 #EOF
