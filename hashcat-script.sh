@@ -1,6 +1,6 @@
 #!/bin/bash
 # lives at:
-# /opt/scripts/hashcat_isucdc-tsi.sh
+# /opt/hc/scripts/hc-tsi.sh
 
 
 if [ $# -eq 0 ]
