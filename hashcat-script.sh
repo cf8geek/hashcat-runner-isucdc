@@ -25,7 +25,10 @@ touch $OUTFILE
 
 #sleep 3
 
-$HASHCATBIN -m $2 -a 3 $1 -1 bcdfghjklmnpqrstvwxyz -2 aeiou ?1?2?1?d?d?1?2?1 -w 3 -o $OUTFILE --session hashcat-tsi -O
+$HASHCATBIN --hwmon-temp-abort=88 -O -m $2 -a 3 $1 -1 bcdfghjklmnpqrstvwxyz -2 aeiou ?1?2?1?d?d?1?2?1 -w 3 -o $OUTFILE
+#sudo $HASHCATBIN -m $2 -a 3 $1 -1 bcdfghjklmnpqrstvwxyz -2 aeiou ?1?2?1?d?d?1?2?1 -w 3 -o $OUTFILE --session hashcat-tsi -O
 
+# NOTES:
+# Wordlist: /path/to/hashcat.bin -m [HashMode] [hash-file] [wordlist]
 
 #EOF
